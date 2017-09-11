@@ -1,0 +1,25 @@
+{
+  "name": "inspirespace-theme",
+  "version": "1.0.0",
+  "description": "Theme for Inspirespace based on Bootstrap",
+  "keywords": [
+    "bootstrap"
+  ],
+  "main": "index.html",
+  "scripts": {
+    "install": "napa chrismsimpson/Metropolis:metropolis-font",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Ulrich Lehner",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "napa": "^3.0.0"
+  }
+}
