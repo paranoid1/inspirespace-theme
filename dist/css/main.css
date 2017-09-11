@@ -5502,5 +5502,6 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-body {
+html {
+  font-size: 1.125rem;
   letter-spacing: -0.01em; }
