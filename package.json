@@ -7,7 +7,7 @@
   ],
   "main": "index.html",
   "scripts": {
-    "install": "napa chrismsimpson/Metropolis:metropolis-font",
+    "install": "napa chrismsimpson/Metropolis:typeface-metropolis",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
@@ -22,6 +22,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "napa": "^3.0.0"
+    "napa": "^3.0.0",
+    "typeface-playfair-display": "0.0.35"
   }
 }

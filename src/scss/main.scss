@@ -75,6 +75,7 @@ $theme-color-interval: 8%;
 
 // @import "font-metropolis";
 @import "font-geomanist";
+@import "font-playfair-display";
 
 //
 // Customize Bootstrap
@@ -102,6 +103,14 @@ $display4-weight:       700;
 $lead-font-weight:      600;
 $font-weight-base:      400;
 
+$blockquote-font-size:  2rem;
+
+//
+// Include Bootstrap
+//
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 //
 // Custom
 //
@@ -111,6 +120,14 @@ html {
   // letter-spacing: -0.01em;
 }
 
+.blockquote {
+  border-left: 6px solid theme-color("primary");
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 900;
+  padding-left: 1rem;
+}
+
 // body {
 //   font-family: Metropolis;
 //   font-family: Montserrat;
@@ -118,10 +135,3 @@ html {
 //   font-family: "Source Sans Pro";
 //   font-family: "Helvetica Neue";
 // }
-
-
-//
-// Include Bootstrap
-//
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
