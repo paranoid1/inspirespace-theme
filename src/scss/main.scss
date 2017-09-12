@@ -128,6 +128,62 @@ html {
   padding-left: 1rem;
 }
 
+.portfolio-heros {
+  $portfolio-hero-height: 90vh;
+  
+  // height: $portfolio-hero-height;
+
+  // &.carousel {
+  //   margin-bottom: 4rem;
+  // }
+  
+  /* Since positioning the image, we need to help out the caption */
+  // &.carousel-caption {
+  //   z-index: 10;
+  //   bottom: 3rem;
+  // }
+  
+  /* Declare heights because of positioning of img element */
+  & .carousel-item {
+    height: $portfolio-hero-height;
+  }
+
+  & .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: $portfolio-hero-height;
+  }
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  h1 {
+    flex-basis: 100%;
+  }
+
+  .card {
+    // border: none;
+    flex-basis: 100%;
+
+    @include media-breakpoint-up(sm) {
+      flex-basis: (100% / 2);
+    }
+    @include media-breakpoint-up(md) {
+      flex-basis: (100% / 3);
+    }
+    @include media-breakpoint-up(lg) {
+      flex-basis: (100% / 4);
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: (100% / 5);
+    }
+  }
+}
+
 // body {
 //   font-family: Metropolis;
 //   font-family: Montserrat;

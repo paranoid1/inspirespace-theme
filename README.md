@@ -13,3 +13,8 @@ npm install
 ```
 npm start
 ```
+
+## TODOs
+
+- Tree shaking
+- Remove unused fonts
