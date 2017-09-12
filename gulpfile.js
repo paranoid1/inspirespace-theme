@@ -51,9 +51,20 @@ gulp.task('sass-min', function () {
 gulp.task('font', function () {
   return gulp.src([
     'node_modules/metropolis-font/Webfonts/**/*.woff',
-    'node_modules/metropolis-font/Webfonts/**/*.woff2'])
+    'node_modules/metropolis-font/Webfonts/**/*.woff2',
+    'vendor/Geomanist-Complete-Webfont/**/*.eot',
+    'vendor/Geomanist-Complete-Webfont/**/*.svg',
+    'vendor/Geomanist-Complete-Webfont/**/*.ttf',
+    'vendor/Geomanist-Complete-Webfont/**/*.woff',
+    'vendor/Geomanist-Complete-Webfont/**/*.woff2'
+  ])
     .pipe(rename({ dirname: '' }))
     .pipe(gulp.dest(PATH_DIST + "font"));
 });
 
-gulp.task('default', ['font', 'serve']);
+gulp.task('js', function () {
+  return gulp.src('node_modules/bootstrap/dist/js/*.js')
+    .pipe(gulp.dest(PATH_DIST + "js"));
+});
+
+gulp.task('default', ['font', 'js', 'serve']);

@@ -31,9 +31,9 @@ $grays: (
 $blue:    #007bff;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
+$pink:    #ff0d7d;
+$red:     #e80e0c;
+$orange:  #e84e0c;
 $yellow:  #ffc107;
 $green:   #28a745;
 $teal:    #20c997;
@@ -73,7 +73,8 @@ $theme-color-interval: 8%;
 // Custom Font
 //
 
-@import "font";
+// @import "font-metropolis";
+@import "font-geomanist";
 
 //
 // Customize Bootstrap
@@ -81,22 +82,25 @@ $theme-color-interval: 8%;
 
 $enable-rounded:        false;
 
-// $font-size-base:        1.125rem;       // 18px
-// $lead-font-size:        125%;
-
 $spacer:                2rem;
 
 $body-bg:               $gray-100;
+$body-color:            $gray-900;
 
-$font-family-base:      "Metropolis";
-$headings-font-weight:  900;
+// $font-family-base:      "Metropolis";
+$font-family-base:      "Geomanist";
 
-$display1-weight:       900;
-$display2-weight:       900;
-$display3-weight:       900;
-$display4-weight:       900;
+$line-height-base:      1.4;
+
+$headings-font-weight:  700;
+
+$display1-weight:       700;
+$display2-weight:       700;
+$display3-weight:       700;
+$display4-weight:       700;
 
 $lead-font-weight:      600;
+$font-weight-base:      400;
 
 //
 // Include Bootstrap
@@ -110,5 +114,13 @@ $lead-font-weight:      600;
 
 html {
   font-size: 1.125rem;
-  letter-spacing: -0.01em;
+  // letter-spacing: -0.01em;
 }
+
+// body {
+//   font-family: Metropolis;
+//   font-family: Montserrat;
+//   font-family: Geomanist;
+//   font-family: "Source Sans Pro";
+//   font-family: "Helvetica Neue";
+// }
