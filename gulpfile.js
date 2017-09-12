@@ -5,9 +5,12 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
+// Setup autoprefixer as Bootstrap
+var autoprefixerOptions = require('./node_modules/bootstrap/build/postcss.config.js')({ file: { dirname: "undefined" } }).plugins.autoprefixer;
+
+
 const PATH_DIST = "dist/";
 const PATH_SRC = "src/";
-
 const TARGET_CSS = "inspirespace";
 
 gulp.task('serve', ['sass', 'sass-min'], function () {
@@ -27,7 +30,7 @@ gulp.task('sass', function () {
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(rename(TARGET_CSS + ".css"))
     .pipe(gulp.dest(PATH_DIST + 'css'))
     .pipe(browserSync.stream());
@@ -40,7 +43,7 @@ gulp.task('sass-min', function () {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(rename(TARGET_CSS + ".min.css"))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest(PATH_DIST + 'css'))
     .pipe(browserSync.stream());
 });
