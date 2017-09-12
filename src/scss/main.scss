@@ -103,12 +103,6 @@ $lead-font-weight:      600;
 $font-weight-base:      400;
 
 //
-// Include Bootstrap
-//
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-//
 // Custom
 //
 
@@ -124,3 +118,10 @@ html {
 //   font-family: "Source Sans Pro";
 //   font-family: "Helvetica Neue";
 // }
+
+
+//
+// Include Bootstrap
+//
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
