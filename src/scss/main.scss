@@ -152,7 +152,8 @@ html {
 .portfolio-items {
   $portfolio-items-max-width: 1600px;
   $portfolio-items-gutter-between: 4px;
-  $portfolio-items-image-aspect-ratio: 4 / 3;
+  $portfolio-items-image-aspect-ratio: 16 / 9;
+  $portfolio-items-image-aspect-ratio-sm-up: 4 / 3;
   $portfolio-items-cols-sm: 2;
   $portfolio-items-cols-md: 3;
   $portfolio-items-cols-lg: 4;
@@ -201,6 +202,10 @@ html {
       position: relative;
       padding: #{1 / $portfolio-items-image-aspect-ratio * 100}% 0 0 0;
       width: 100%;
+
+      @include media-breakpoint-up(sm) {
+        padding: #{1 / $portfolio-items-image-aspect-ratio-sm-up * 100}% 0 0 0;
+      }
 
       img {
         bottom: 0;
