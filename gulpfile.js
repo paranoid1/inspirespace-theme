@@ -54,6 +54,7 @@ gulp.task('font', function () {
     'node_modules/typeface-metropolis/Webfonts/**/*.woff2',
     'node_modules/typeface-playfair-display/files/*.woff',
     'node_modules/typeface-playfair-display/files/*.woff2',
+    'node_modules/open-iconic/font/fonts/*',
     'vendor/Geomanist-Complete-Webfont/**/*.eot',
     'vendor/Geomanist-Complete-Webfont/**/*.svg',
     'vendor/Geomanist-Complete-Webfont/**/*.ttf',

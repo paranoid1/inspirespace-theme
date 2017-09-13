@@ -112,6 +112,13 @@ $blockquote-font-size:  2rem;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //
+// Include Open Iconic
+//
+
+$icon-font-path: "../font/";
+@import "../../node_modules/open-iconic/font/css/open-iconic-bootstrap.scss";
+
+//
 // Custom
 //
 
@@ -129,57 +136,83 @@ html {
 }
 
 .portfolio-heros {
-  $portfolio-hero-height: 90vh;
-  
-  // height: $portfolio-hero-height;
+  $portfolio-hero-height: 80vh;
 
-  // &.carousel {
-  //   margin-bottom: 4rem;
-  // }
-  
-  /* Since positioning the image, we need to help out the caption */
-  // &.carousel-caption {
-  //   z-index: 10;
-  //   bottom: 3rem;
-  // }
-  
-  /* Declare heights because of positioning of img element */
   & .carousel-item {
     height: $portfolio-hero-height;
   }
 
   & .carousel-item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
     height: $portfolio-hero-height;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
 .portfolio-items {
+  $portfolio-items-max-width: 1600px;
+  $portfolio-items-gutter-between: 4px;
+  $portfolio-items-image-aspect-ratio: 4 / 3;
+  $portfolio-items-cols-sm: 2;
+  $portfolio-items-cols-md: 3;
+  $portfolio-items-cols-lg: 4;
+
+  @mixin portfolio-item-style($portfolio-items-cols) {
+    padding: $portfolio-items-gutter-between/2;
+    flex-basis: #{(100% / $portfolio-items-cols)};
+  }
+
   display: flex;
   flex-wrap: wrap;
+  max-width: $portfolio-items-max-width;
+  margin-left: -$portfolio-items-gutter-between/2;
+  margin-right: -$portfolio-items-gutter-between/2;
+  overflow-x: hidden;
+
+  // Center horizontally when max-size is reached
+  @media (min-width:$portfolio-items-max-width) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   h1 {
     flex-basis: 100%;
   }
 
   .card {
-    // border: none;
+    border: none;
     flex-basis: 100%;
 
-    @include media-breakpoint-up(sm) {
-      flex-basis: (100% / 2);
+    @include media-breakpoint-only(sm) {
+      @include portfolio-item-style($portfolio-items-cols-sm)
     }
-    @include media-breakpoint-up(md) {
-      flex-basis: (100% / 3);
+    @include media-breakpoint-only(md) {
+      @include portfolio-item-style($portfolio-items-cols-md)
     }
     @include media-breakpoint-up(lg) {
-      flex-basis: (100% / 4);
+      @include portfolio-item-style($portfolio-items-cols-lg)
     }
-    @include media-breakpoint-up(xl) {
-      flex-basis: (100% / 5);
+
+    .card-img-top {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      position: relative;
+      padding: #{1 / $portfolio-items-image-aspect-ratio * 100}% 0 0 0;
+      width: 100%;
+
+      img {
+        bottom: 0;
+        display: block;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
     }
   }
 }
