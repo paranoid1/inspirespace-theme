@@ -112,19 +112,30 @@ $blockquote-font-size:  2rem;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //
-// Include Open Iconic
+// Include Font Awesome
 //
 
-$icon-font-path: "../font/";
-@import "../../node_modules/open-iconic/font/css/open-iconic-bootstrap.scss";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 
 //
 // Custom
 //
 
+
 html {
-  font-size: 1.125rem;
-  // letter-spacing: -0.01em;
+  font-size: 12px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
 }
 
 .blockquote {
