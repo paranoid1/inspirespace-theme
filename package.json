@@ -2,6 +2,10 @@
   "name": "inspirespace-theme",
   "version": "1.0.0",
   "description": "Theme for Inspirespace based on Bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ulrichson/inspirespace-theme.git"
+  },
   "keywords": [
     "bootstrap"
   ],
