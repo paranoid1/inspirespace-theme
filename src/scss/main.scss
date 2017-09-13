@@ -158,7 +158,7 @@ html {
   $portfolio-items-cols-lg: 4;
 
   @mixin portfolio-item-style($portfolio-items-cols) {
-    padding: $portfolio-items-gutter-between/2;
+    border: $portfolio-items-gutter-between/2 solid $body-bg;
     flex-basis: #{(100% / $portfolio-items-cols)};
   }
 
