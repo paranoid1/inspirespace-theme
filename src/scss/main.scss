@@ -73,7 +73,6 @@ $theme-color-interval: 8%;
 // Custom Font
 //
 
-// @import "font-metropolis";
 @import "font-geomanist";
 @import "font-playfair-display";
 
@@ -88,7 +87,6 @@ $spacer:                2rem;
 $body-bg:               $gray-100;
 $body-color:            $gray-900;
 
-// $font-family-base:      "Metropolis";
 $font-family-base:      "Geomanist";
 
 $line-height-base:      1.4;
@@ -118,9 +116,8 @@ $blockquote-font-size:  2rem;
 @import "../../node_modules/font-awesome/scss/font-awesome";
 
 //
-// Custom
+// Custom Styles
 //
-
 
 html {
   font-size: 12px;
@@ -145,6 +142,10 @@ html {
   font-weight: 900;
   padding-left: 1rem;
 }
+
+//
+// Portfolio
+//
 
 .portfolio-heros {
   $portfolio-hero-height: 80vh;
@@ -232,11 +233,3 @@ html {
     }
   }
 }
-
-// body {
-//   font-family: Metropolis;
-//   font-family: Montserrat;
-//   font-family: Geomanist;
-//   font-family: "Source Sans Pro";
-//   font-family: "Helvetica Neue";
-// }
