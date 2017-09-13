@@ -50,8 +50,6 @@ gulp.task('sass-min', function () {
 
 gulp.task('font', function () {
   return gulp.src([
-    // 'node_modules/typeface-metropolis/Webfonts/**/*.woff',
-    // 'node_modules/typeface-metropolis/Webfonts/**/*.woff2',
     'node_modules/typeface-playfair-display/files/*.woff',
     'node_modules/typeface-playfair-display/files/*.woff2',
     'node_modules/font-awesome/fonts/*',
