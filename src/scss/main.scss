@@ -3,6 +3,7 @@
 //
 
 $primary-color: #ff2800;
+$base-font-size-xs: 12px;
 
 $white:  #fff;
 $gray-100: #f8f9fa;
@@ -120,18 +121,18 @@ $blockquote-font-size:  2rem;
 //
 
 html {
-  font-size: 12px;
+  font-size: $base-font-size-xs;
 
   @include media-breakpoint-up(sm) {
-    font-size: 14px;
+    font-size: round($base-font-size-xs * 1.1);
   }
 
   @include media-breakpoint-up(md) {
-    font-size: 18px;
+    font-size: round($base-font-size-xs * 1.2);
   }
   
   @include media-breakpoint-up(lg) {
-    font-size: 20px;
+    font-size: round($base-font-size-xs * 1.3);
   }
 }
 
