@@ -104,6 +104,8 @@ $font-weight-base:      400;
 
 $blockquote-font-size:  2rem;
 
+$btn-font-weight:       500;
+
 //
 // Include Bootstrap
 //
@@ -142,6 +144,10 @@ html {
   font-style: italic;
   font-weight: 900;
   padding-left: 1rem;
+}
+
+.btn {
+  text-transform: uppercase;
 }
 
 //
