@@ -58,7 +58,7 @@ $colors: (
 
 $theme-colors: (
   primary: $primary-color,
-  secondary: $gray-600,
+  secondary: $gray-900,
   success: $green,
   info: $cyan,
   warning: $yellow,
@@ -88,7 +88,9 @@ $spacer:                2rem;
 $body-bg:               $gray-100;
 $body-color:            $gray-900;
 
-$font-family-base:      "Geomanist";
+$border-width:          2px;
+
+$font-family-base:      "Geomanist", "Helvetica Neue", Arial, sans-serif;
 
 $line-height-base:      1.4;
 
@@ -149,6 +151,13 @@ html {
 .btn {
   text-transform: uppercase;
 }
+
+// Fix for outline light buttons
+
+  .btn-outline-light {
+    @include button-outline-variant(theme-color("light"), theme-color("dark"));
+  }
+
 
 //
 // Portfolio
