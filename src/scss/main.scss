@@ -154,9 +154,9 @@ html {
 
 // Fix for outline light buttons
 
-  .btn-outline-light {
-    @include button-outline-variant(theme-color("light"), theme-color("dark"));
-  }
+.btn-outline-light {
+  @include button-outline-variant(theme-color("light"), theme-color("dark"));
+}
 
 
 //
@@ -190,6 +190,10 @@ html {
 
   & .carousel-caption {
     text-shadow: 0px 2px 0px rgba($body-color, 0.2);
+
+    & .btn {
+      text-shadow: none;
+    }
   }
 }
 
