@@ -163,8 +163,13 @@ html {
 // Portfolio
 //
 
+$portfolio-hero-height: 85vh;
+
 .portfolio-heros {
-  $portfolio-hero-height: 80vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 
   & .carousel-item {
     height: $portfolio-hero-height;
@@ -206,23 +211,37 @@ html {
   $portfolio-items-cols-md: 3;
   $portfolio-items-cols-lg: 4;
 
+  background-color: $body-bg;
+  min-height: $portfolio-hero-height;
+  margin-top: $portfolio-hero-height;
+  position: relative;
+
+  // Dummy element to allow correct top margin for heading
+  &::before {
+    content: '';
+    display: block;
+    height: 0.01px;
+  }
+
   @mixin portfolio-item-style($portfolio-items-cols) {
     border: $portfolio-items-gutter-between/2 solid $body-bg;
     flex-basis: #{(100% / $portfolio-items-cols)};
   }
 
-  display: flex;
-  flex-wrap: wrap;
-  max-width: $portfolio-items-max-width;
-  margin-left: -$portfolio-items-gutter-between/2;
-  margin-right: -$portfolio-items-gutter-between/2;
-  overflow-x: hidden;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $portfolio-items-max-width;
+    margin-left: -$portfolio-items-gutter-between/2;
+    margin-right: -$portfolio-items-gutter-between/2;
+    overflow-x: hidden;
 
-  // Center horizontally when max-size is reached
-  @media (min-width:$portfolio-items-max-width) {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    // Center horizontally when max-size is reached
+    @media (min-width:$portfolio-items-max-width) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   h1 {
