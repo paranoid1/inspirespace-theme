@@ -1,0 +1,125 @@
+$portfolio-hero-height: 85vh;
+
+.portfolio-heros {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  & .carousel-item {
+    height: $portfolio-hero-height;
+
+    &:after {
+      background: linear-gradient(to bottom, rgba($white, 0) 0%,rgba($black, 0.2) 50%,rgba($black, 0.4) 100%);
+      // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66000000',GradientType=0 );
+      content: '';
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    
+    img {
+      height: $portfolio-hero-height;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  & .carousel-caption {
+    text-shadow: 0px 2px 0px rgba($body-color, 0.2);
+
+    & .btn {
+      text-shadow: none;
+    }
+  }
+}
+
+.portfolio-items {
+  $portfolio-items-max-width: 1600px;
+  $portfolio-items-gutter-between: 4px;
+  $portfolio-items-image-aspect-ratio: 16 / 9;
+  $portfolio-items-image-aspect-ratio-sm-up: 4 / 3;
+  $portfolio-items-cols-sm: 2;
+  $portfolio-items-cols-md: 3;
+  $portfolio-items-cols-lg: 4;
+
+  background-color: $body-bg;
+  min-height: $portfolio-hero-height;
+  margin-top: $portfolio-hero-height;
+  position: relative;
+
+  // Dummy element to allow correct top margin for heading
+  &::before {
+    content: '';
+    display: block;
+    height: 0.01px;
+  }
+
+  @mixin portfolio-item-style($portfolio-items-cols) {
+    border: $portfolio-items-gutter-between/2 solid $body-bg;
+    flex-basis: #{(100% / $portfolio-items-cols)};
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $portfolio-items-max-width;
+    margin-left: -$portfolio-items-gutter-between/2;
+    margin-right: -$portfolio-items-gutter-between/2;
+    overflow-x: hidden;
+
+    // Center horizontally when max-size is reached
+    @media (min-width:$portfolio-items-max-width) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  h1 {
+    flex-basis: 100%;
+  }
+
+  .card {
+    border: none;
+    flex-basis: 100%;
+
+    @include media-breakpoint-only(sm) {
+      @include portfolio-item-style($portfolio-items-cols-sm)
+    }
+    @include media-breakpoint-only(md) {
+      @include portfolio-item-style($portfolio-items-cols-md)
+    }
+    @include media-breakpoint-up(lg) {
+      @include portfolio-item-style($portfolio-items-cols-lg)
+    }
+
+    .card-img-top {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      position: relative;
+      padding: #{1 / $portfolio-items-image-aspect-ratio * 100}% 0 0 0;
+      width: 100%;
+
+      @include media-breakpoint-up(sm) {
+        padding: #{1 / $portfolio-items-image-aspect-ratio-sm-up * 100}% 0 0 0;
+      }
+
+      img {
+        bottom: 0;
+        display: block;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+}
