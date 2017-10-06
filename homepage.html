@@ -201,6 +201,32 @@
     crossorigin="anonymous"></script>
   <script src="dist/js/bootstrap.min.js"></script>
 
+  <script>
+    // https://www.kirupa.com/html5/smooth_parallax_scrolling.htm
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+    }
+
+    function setScale(scale, el) {
+      el.style.transform = "scale(" + scale + ", " + scale + ")";
+    }
+
+    var heros = document.getElementById("heroPortfolioItems");
+    var yScrollPosition;
+  
+    window.addEventListener("DOMContentLoaded", scrollLoop, false);
+  
+    function scrollLoop() {
+      yScrollPosition = window.scrollY;
+      if (yScrollPosition > 0) {
+        setTranslate(0, yScrollPosition * -0.6, heros);
+      } else {
+        setScale(1 + yScrollPosition * -0.02, heros);
+      }
+      requestAnimationFrame(scrollLoop);
+    }
+  </script>
+
 </body>
 
 </html>
