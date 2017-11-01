@@ -5,7 +5,7 @@
 $primary-color: #ff2800;
 // $base-font-size-xs: 17pt;
 
-$white:  #fff;
+$white:  #ffffff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -15,7 +15,7 @@ $gray-600: #868e96;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:  #000;
+$black:  #111111;
 
 $grays: (
   100: $gray-100,
@@ -64,7 +64,7 @@ $theme-colors: (
   warning: $yellow,
   danger: $red,
   light: $gray-100,
-  dark: $gray-800
+  dark: $gray-900
 );
 
 // Set a specific jump point for requesting color jumps
@@ -85,8 +85,8 @@ $enable-rounded:        false;
 
 $spacer:                2rem;
 
-$body-bg:               $gray-100;
-$body-color:            $gray-900;
+$body-bg:               $gray-100; // theme-color("light");
+$body-color:            $gray-900; // theme-color("dark");
 
 $border-width:          2px;
 
