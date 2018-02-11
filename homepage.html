@@ -16,7 +16,7 @@
     <a class="navbar-brand" href="/" aria-label="To homepage"><strong class="text-uppercase">Ulrich <span class="text-primary">Lehner</span></strong>&nbsp;<small>Photography</small></a>
   </nav>
   <main>
-    <section id="heroPortfolioItems" class="portfolio-heros carousel slide" data-ride="carousel">
+    <section id="heroPortfolioItems" class="portfolio-heros carousel slide" data-ride="carousel" data-keyboard="true">
       <ol class="carousel-indicators">
         <li data-target="#heroPortfolioItems" data-slide-to="0" class="active"></li>
         <li data-target="#heroPortfolioItems" data-slide-to="1"></li>
@@ -288,6 +288,23 @@
       }
       requestAnimationFrame(scrollLoop);
     }
+
+    $(document).ready(function() {
+      /*$("#heroPortfolioItems").swiperight(function() {
+          $(this).carousel('prev');
+        });
+      $("#heroPortfolioItems").swipeleft(function() {
+          $(this).carousel('next');
+      });*/
+
+      $(document).bind('keyup', function(e) {
+        if (e.keyCode==39) {
+          $("#heroPortfolioItems").carousel('next');;
+        } else if(e.keyCode==37){
+          $("#heroPortfolioItems").carousel('prev');;
+        }
+      });
+    });
   </script>
 
 </body>

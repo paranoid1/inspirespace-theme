@@ -164,3 +164,9 @@ $btn-font-weight:       500;
 // Portfolio
 //
 @import "portfolio";
+
+// prevent body scrolling when cursor keys are pressed
+body, html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
