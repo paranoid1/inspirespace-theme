@@ -121,5 +121,30 @@ $portfolio-hero-height: 85vh;
         width: 100%;
       }
     }
+
+    &--hero {
+      @include media-breakpoint-up(sm) {
+        background-color: $jumbotron-bg;
+
+        flex-direction: row;
+        flex-basis: 100%;
+
+        &--img-right {
+          flex-direction: row-reverse;
+        }
+
+        & > * {
+          flex-basis: 50%;
+        }
+
+        & > .card-body {
+          display: flex;
+          flex-direction: column ;
+          font-size: $lead-font-size;
+          font-weight: $lead-font-weight;
+          justify-content: center;
+        }
+      }
+    }
   }
 }
