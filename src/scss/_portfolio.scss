@@ -97,6 +97,24 @@ $portfolio-hero-height: 85vh;
       @include portfolio-item-style($portfolio-items-cols-lg)
     }
 
+    &:hover {
+      .card-img {
+        & > a {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .card-img {
+      overflow: hidden;
+
+      & > a {
+        display: block;
+        transition: all 0.5s;
+      }
+      
+    }
+
     .card-img-top {
       display: block;
       height: 0;
