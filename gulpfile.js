@@ -6,7 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Setup autoprefixer as Bootstrap
-var autoprefixerOptions = require('./node_modules/bootstrap/build/postcss.config.js')({ file: { dirname: "undefined" } }).plugins.autoprefixer;
+var autoprefixerOptions = {}; // require('./node_modules/bootstrap/build/postcss.config.js')({ file: { dirname: "undefined" } }).plugins.autoprefixer;
 
 
 const PATH_DIST = "dist/";
