@@ -122,6 +122,14 @@ $portfolio-hero-height: 85vh;
       }
     }
 
+    .card-text {
+      display: none;
+    }
+
+    .card-title {
+      font-size: $h6-font-size
+    }
+
     &--hero {
       @include media-breakpoint-up(sm) {
         background-color: $jumbotron-bg;
@@ -132,7 +140,7 @@ $portfolio-hero-height: 85vh;
         &--img-right {
           flex-direction: row-reverse;
 
-          & > .card-img {
+          & .card-img {
             margin-left: $portfolio-items-gutter-between !important;
             margin-right: 0 !important;
           }
@@ -142,17 +150,29 @@ $portfolio-hero-height: 85vh;
           flex-basis: 50%;
         }
 
-        & > .card-img {
+        & .card-img {
           margin-left: 0;
           margin-right: $portfolio-items-gutter-between;
         }
 
-        & > .card-body {
+        & .card-title {
+          font-size: $h3-font-size;
+
+          @include media-breakpoint-up(md) {
+            font-size: $h1-font-size;
+          }
+        }
+
+        & .card-body {
           display: flex;
           flex-direction: column ;
           font-size: $lead-font-size;
           font-weight: $lead-font-weight;
           justify-content: center;
+        }
+
+        & .card-text {
+          display: block;
         }
       }
     }
