@@ -131,10 +131,20 @@ $portfolio-hero-height: 85vh;
 
         &--img-right {
           flex-direction: row-reverse;
+
+          & > .card-img {
+            margin-left: $portfolio-items-gutter-between !important;
+            margin-right: 0 !important;
+          }
         }
 
         & > * {
           flex-basis: 50%;
+        }
+
+        & > .card-img {
+          margin-left: 0;
+          margin-right: $portfolio-items-gutter-between;
         }
 
         & > .card-body {
