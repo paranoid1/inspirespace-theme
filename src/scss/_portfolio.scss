@@ -1,4 +1,11 @@
 $portfolio-hero-height: 85vh;
+$portfolio-items-max-width: 1600px;
+$portfolio-items-gutter-between: 4px;
+$portfolio-items-image-aspect-ratio: 16 / 9;
+$portfolio-items-image-aspect-ratio-sm-up: 4 / 3;
+$portfolio-items-cols-sm: 2;
+$portfolio-items-cols-md: 3;
+$portfolio-items-cols-lg: 4;
 
 .portfolio-heros {
   left: 0;
@@ -38,14 +45,6 @@ $portfolio-hero-height: 85vh;
 }
 
 .portfolio-items {
-  $portfolio-items-max-width: 1600px;
-  $portfolio-items-gutter-between: 4px;
-  $portfolio-items-image-aspect-ratio: 16 / 9;
-  $portfolio-items-image-aspect-ratio-sm-up: 4 / 3;
-  $portfolio-items-cols-sm: 2;
-  $portfolio-items-cols-md: 3;
-  $portfolio-items-cols-lg: 4;
-
   background-color: $body-bg;
   min-height: $portfolio-hero-height;
   margin-top: $portfolio-hero-height;
@@ -148,25 +147,30 @@ $portfolio-hero-height: 85vh;
       @include media-breakpoint-up(sm) {
         background-color: $jumbotron-bg;
 
+        border-left: 0;
+        border-right: 0;
+
         flex-direction: row;
         flex-basis: 100%;
 
-        &--img-right {
+        &:nth-of-type(even) {
           flex-direction: row-reverse;
+        }
 
-          & .card-img {
-            margin-left: $portfolio-items-gutter-between !important;
-            margin-right: 0 !important;
-          }
+        // Class needs to be added when hero count is even
+        &--cnt-even {
+          position: relative;
+          left: $portfolio-items-gutter-between / 2;
+        }
+
+        // Class needs to be added when hero count is odd
+        &--cnt-odd {
+          position: relative;
+          left: -$portfolio-items-gutter-between / 2;
         }
 
         & > * {
           flex-basis: 50%;
-        }
-
-        & .card-img {
-          margin-left: 0;
-          margin-right: $portfolio-items-gutter-between;
         }
 
         & .card-title {
