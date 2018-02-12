@@ -64,7 +64,7 @@ gulp.task('font', function () {
 });
 
 gulp.task('js', function () {
-  return gulp.src('node_modules/bootstrap/dist/js/*.js')
+  return gulp.src(['node_modules/bootstrap/dist/js/*.js', 'node_modules/bootstrap/dist/js/*.map'])
     .pipe(gulp.dest(PATH_DIST + "js"));
 });
 
