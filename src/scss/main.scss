@@ -122,6 +122,12 @@ $btn-font-weight:       500;
 @import "../../node_modules/font-awesome/scss/font-awesome";
 
 //
+// Global variables
+//
+
+$body-vertical-spacing: map-get($spacers, 4);
+
+//
 // Custom Styles
 //
 
@@ -169,4 +175,13 @@ $btn-font-weight:       500;
 body, html {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+body {
+  // Compensate fixed Navbar
+  padding-top: $body-vertical-spacing;
+}
+
+.navbar .navbar-brand {
+  margin-right: 0;
 }

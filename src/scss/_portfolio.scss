@@ -47,20 +47,23 @@ $portfolio-items-cols-lg: 4;
 
 .portfolio-items {
   background-color: $body-bg;
-  min-height: $portfolio-hero-height;
-  margin-top: $portfolio-hero-height;
   position: relative;
-
-  // Dummy element to allow correct top margin for heading
-  &::before {
-    content: '';
-    display: block;
-    height: 0.01px;
-  }
 
   @mixin portfolio-item-style($portfolio-items-cols) {
     border: $portfolio-items-gutter-between/2 solid $body-bg;
     flex-basis: #{(100% / $portfolio-items-cols)};
+  }
+
+  &--after-heros {
+    min-height: calc(#{$portfolio-hero-height} - #{$body-vertical-spacing});
+    margin-top: calc(#{$portfolio-hero-height} - #{$body-vertical-spacing});
+
+    // Dummy element to allow correct top margin for heading
+    &::before {
+      content: '';
+      display: block;
+      height: 0.01px;
+    }
   }
 
   &__container {
