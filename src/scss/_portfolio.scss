@@ -50,7 +50,7 @@ $portfolio-items-cols-lg: 4;
   position: relative;
 
   @mixin portfolio-item-style($portfolio-items-cols) {
-    border: $portfolio-items-gutter-between/2 solid $body-bg;
+    border: $portfolio-items-gutter-between / 2 solid $body-bg;
     flex-basis: #{(100% / $portfolio-items-cols)};
   }
 
@@ -70,9 +70,10 @@ $portfolio-items-cols-lg: 4;
     display: flex;
     flex-wrap: wrap;
     max-width: $portfolio-items-max-width;
-    margin-left: -$portfolio-items-gutter-between/2;
-    margin-right: -$portfolio-items-gutter-between/2;
+    margin-left: -$portfolio-items-gutter-between / 2;
+    margin-right: -$portfolio-items-gutter-between / 2;
     overflow-x: hidden;
+    padding-top: $portfolio-items-gutter-between / 2;
 
     // Center horizontally when max-size is reached
     @media (min-width:$portfolio-items-max-width) {
