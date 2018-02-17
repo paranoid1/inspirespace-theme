@@ -5,7 +5,8 @@ $portfolio-items-image-aspect-ratio: 16 / 9;
 $portfolio-items-image-aspect-ratio-sm-up: 4 / 3;
 $portfolio-items-cols-sm: 2;
 $portfolio-items-cols-md: 3;
-$portfolio-items-cols-lg: 4;
+$portfolio-items-cols-lg: 3;
+$portfolio-items-cols-xl: 4;
 
 .portfolio-heros {
   left: 0;
@@ -94,11 +95,17 @@ $portfolio-items-cols-lg: 4;
     @include media-breakpoint-only(sm) {
       @include portfolio-item-style($portfolio-items-cols-sm)
     }
+    
     @include media-breakpoint-only(md) {
       @include portfolio-item-style($portfolio-items-cols-md)
     }
+
     @include media-breakpoint-up(lg) {
       @include portfolio-item-style($portfolio-items-cols-lg)
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include portfolio-item-style($portfolio-items-cols-xl)
     }
 
     .card-img {
