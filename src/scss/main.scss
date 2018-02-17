@@ -125,7 +125,7 @@ $btn-font-weight:       500;
 // Global variables
 //
 
-$body-vertical-spacing: map-get($spacers, 4);
+$body-vertical-spacing: $navbar-brand-height + $navbar-brand-padding-y * 2; // map-get($spacers, 4);
 
 //
 // Custom Styles
