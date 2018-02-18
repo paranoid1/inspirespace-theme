@@ -52,7 +52,7 @@ $portfolio-items-cols-xl: 4;
 
   @mixin portfolio-item-style($portfolio-items-cols) {
     border: $portfolio-items-gutter-between / 2 solid $body-bg;
-    flex-basis: #{(100% / $portfolio-items-cols)};
+    flex: 0 1 #{(100% / $portfolio-items-cols)};
   }
 
   &--after-heros {
@@ -85,12 +85,12 @@ $portfolio-items-cols-xl: 4;
   }
 
   h1 {
-    flex-basis: 100%;
+    flex: 0 1 100%;
   }
 
   .card {
     border: none;
-    flex-basis: 100%;
+    flex: 0 1 100%;
 
     @include media-breakpoint-only(sm) {
       @include portfolio-item-style($portfolio-items-cols-sm)
@@ -163,7 +163,7 @@ $portfolio-items-cols-xl: 4;
         border-right: 0;
 
         flex-direction: row;
-        flex-basis: 100%;
+        flex: 0 1 100%;
 
         &:nth-of-type(even) {
           flex-direction: row-reverse;
@@ -182,7 +182,7 @@ $portfolio-items-cols-xl: 4;
         }
 
         & > * {
-          flex-basis: 50%;
+          flex: 0 1 50%;
         }
 
         & .card-title {
