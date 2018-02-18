@@ -90,6 +90,7 @@ $portfolio-items-cols-xl: 4;
 
   .card {
     border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0); // Fix for Safari on iOS that occasionally renders a black line when zooming, see https://stackoverflow.com/questions/9983520/webkit-animation-is-leaving-junk-pixels-behind-on-the-screen/17822836#17822836
     flex: 0 1 100%;
 
     @include media-breakpoint-only(sm) {
