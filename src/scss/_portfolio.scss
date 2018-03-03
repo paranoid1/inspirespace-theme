@@ -74,13 +74,18 @@ $portfolio-items-cols-xl: 4;
     margin-left: -$portfolio-items-gutter-between / 2;
     margin-right: -$portfolio-items-gutter-between / 2;
     overflow-x: hidden;
-    padding-top: $portfolio-items-gutter-between / 2;
+    // padding-top: $portfolio-items-gutter-between / 2;
 
     // Center horizontally when max-size is reached
     @media (min-width:$portfolio-items-max-width) {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    &:first-child {
+      margin-top: -$portfolio-items-gutter-between / 2;
+      // padding-top: 0;
     }
   }
 
