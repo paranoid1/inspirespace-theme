@@ -50,14 +50,19 @@ gulp.task('sass-min', function () {
 
 gulp.task('font', function () {
   return gulp.src([
-    'node_modules/typeface-playfair-display/files/*.woff',
-    'node_modules/typeface-playfair-display/files/*.woff2',
+    // 'node_modules/typeface-playfair-display/files/*.woff',
+    // 'node_modules/typeface-playfair-display/files/*.woff2',
     'node_modules/font-awesome/fonts/*',
     'vendor/Geomanist-Complete-Webfont/**/*.eot',
     'vendor/Geomanist-Complete-Webfont/**/*.svg',
     'vendor/Geomanist-Complete-Webfont/**/*.ttf',
     'vendor/Geomanist-Complete-Webfont/**/*.woff',
-    'vendor/Geomanist-Complete-Webfont/**/*.woff2'
+    'vendor/Geomanist-Complete-Webfont/**/*.woff2',
+    'vendor/Noway_Round_Complete_Web/**/*.eot',
+    'vendor/Noway_Round_Complete_Web/**/*.svg',
+    'vendor/Noway_Round_Complete_Web/**/*.ttf',
+    'vendor/Noway_Round_Complete_Web/**/*.woff',
+    'vendor/Noway_Round_Complete_Web/**/*.woff2'
   ])
     .pipe(rename({ dirname: '' }))
     .pipe(gulp.dest(PATH_DIST + "fonts"));

@@ -76,7 +76,8 @@ $theme-color-interval: 8%;
 //
 
 @import "font-geomanist";
-@import "font-playfair-display";
+@import "font-noway-round";
+// @import "font-playfair-display";
 
 //
 // Customize Bootstrap
@@ -91,10 +92,11 @@ $body-color:            $gray-900; // theme-color("dark");
 
 $border-width:          2px;
 
-$font-family-base:      "Geomanist", "Helvetica Neue", Arial, sans-serif;
+$font-family-base:      "Noway Round", "Helvetica Neue", Arial, sans-serif;
 
 $line-height-base:      1.5;
 
+$headings-font-family:  "Geomanist";
 $headings-font-weight:  700;
 
 $display1-weight:       700;
@@ -149,13 +151,14 @@ $body-vertical-spacing: $navbar-brand-height + $navbar-brand-padding-y * 2; // m
 
 .blockquote {
   border-left: 6px solid theme-color("primary");
-  font-family: "Playfair Display";
+  font-family: "Geomanist";
   font-style: italic;
-  font-weight: 900;
+  font-weight: 700;
   padding-left: 1rem;
 }
 
 .btn {
+  font-family: $headings-font-family;
   text-transform: uppercase;
 }
 
