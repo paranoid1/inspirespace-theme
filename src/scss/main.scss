@@ -162,6 +162,10 @@ $body-vertical-spacing: $navbar-brand-height + $navbar-brand-padding-y * 2; // m
   text-transform: uppercase;
 }
 
+.navbar {
+  font-family: $headings-font-family;
+}
+
 // Fix for outline light buttons
 
 .btn-outline-light {
