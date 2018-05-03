@@ -12,19 +12,20 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Ulrich Lehner",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.0.0",
-    "browser-sync": "^2.23.6",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.1",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "typeface-playfair-display": "0.0.35"
   }
