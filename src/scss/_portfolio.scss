@@ -43,7 +43,8 @@ $portfolio-items-cols-xl: 4;
   }
 
   & .carousel-caption {
-    text-shadow: 0px 2px 0px rgba($body-color, 0.2);
+    text-shadow: 0px 2px 0px rgba($body-color, 0.2),
+      0px 5px 15px rgba($body-color, 0.4);
 
     & .btn {
       text-shadow: none;
