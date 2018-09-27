@@ -93,10 +93,11 @@ $body-color: $gray-900; // theme-color("dark");
 $border-width: 2px;
 
 $font-family-base: 'Noway Round', 'Helvetica Neue', Arial, sans-serif;
+$font-family-display: 'Geomanist', 'Helvetica Neue', Arial, sans-serif;
 
 $line-height-base: 1.5;
 
-$headings-font-family: 'Geomanist', 'Helvetica Neue', Arial, sans-serif;
+$headings-font-family: $font-family-display;
 $headings-font-weight: 700;
 
 $display1-weight: 700;
@@ -165,6 +166,14 @@ $body-vertical-spacing: $navbar-brand-height + $navbar-brand-padding-y * 2; // m
 .navbar {
   font-family: $headings-font-family;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.lead,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: $font-family-display;
 }
 
 // Fix for outline light buttons
